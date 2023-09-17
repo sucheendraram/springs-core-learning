@@ -1,9 +1,13 @@
-package studyonline.object_dependency_injection;
+package studyonline.arraylist_dependency_injection;
+
+import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Student {
 	private int studentId;
 	private Activities activities;
 	private Friends friends;
+	private ArrayList allIds;
 
 	public void setStudentId(int studentId) {
 		this.studentId = studentId;
@@ -12,11 +16,13 @@ public class Student {
 	public void setActivities(Activities activities) {
 		this.activities = activities;
 	}
-	
-	
 
 	public void setFriends(Friends friends) {
 		this.friends = friends;
+	}
+
+	public void setAllIds(ArrayList allIds) {
+		this.allIds = allIds;
 	}
 
 	public void eat() {
@@ -45,6 +51,13 @@ public class Student {
 
 	public void sleep() {
 		activities.sleep(studentId);
+	}
+	
+	public void displayAllIds() {
+		Iterator itr = allIds.iterator();
+		while(itr.hasNext()) {
+			System.out.println(itr.next());
+		}
 	}
 
 }

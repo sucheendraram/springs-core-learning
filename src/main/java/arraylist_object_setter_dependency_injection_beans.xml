@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/util 
+   		   http://www.springframework.org/schema/util/spring-util.xsd
+           ">
+
+
+	<bean id="activitiesRef"
+		class="studyonline.arraylist_dependency_injection.Activities"></bean>
+	<bean id="friendsRef"
+		class="studyonline.arraylist_dependency_injection.Friends"></bean>
+
+	<bean id="student"
+		class="studyonline.arraylist_dependency_injection.Student">
+		<property name="studentId" value="10001"></property>
+		<property name="activities" ref="activitiesRef"></property>
+		<property name="friends" ref="friendsRef">
+		</property>
+		<property name="allIds">
+			<util:list list-class="java.util.ArrayList"
+				value-type="java.lang.String">
+				<value>Aadhar = 1234 5678 9010</value>
+				<value>PAN = EMPRC1476R</value>
+				<value>Passport = Pass12345</value>
+			</util:list>
+		</property>
+
+	</bean>
+
+	<bean id="anotherStudent"
+		class="studyonline.arraylist_dependency_injection.Student">
+		<property name="studentId" value="20002"></property>
+		<property name="activities" ref="activitiesRef"></property>
+		<property name="friends" ref="friendsRef"></property>
+		<property name="allIds">
+			<util:list list-class="java.util.ArrayList"
+				value-type="java.lang.String">
+				<value>Aadhar = 9411 5255 9010</value>
+				<value>PAN = SES424FFAF</value>
+				<value>Passport = Pass09876</value>
+			</util:list>
+		</property>
+
+	</bean>
+
+
+</beans>

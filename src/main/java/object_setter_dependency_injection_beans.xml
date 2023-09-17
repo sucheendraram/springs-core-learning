@@ -10,6 +10,9 @@
 		<property name="activities">
 			<bean class="studyonline.object_dependency_injection.Activities"></bean>
 		</property>
+		<property name="friends">
+			<bean class="studyonline.object_dependency_injection.Friends"></bean>
+		</property>
 	</bean>
 
 </beans>

@@ -8,9 +8,13 @@ public class StudentApplication {
 	public static void main(String[] args) {
 		ApplicationContext context = new ClassPathXmlApplicationContext("object_setter_dependency_injection_beans.xml");
 		Student student = context.getBean("student", Student.class);
+
 		student.eat();
 		student.study();
 		student.playCricket();
+		student.goToClass();
+		student.goToCanteen();
+		student.doGroupStudy();
 		student.sleep();
 	}
 }
