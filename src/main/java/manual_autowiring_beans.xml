@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<!-- Autowire using name -->
+	<!-- <bean id="humanHeart" class="studyonline.autowiring.xmlapproach.Heart"> 
+		</bean> <bean id="human" class="studyonline.autowiring.xmlapproach" autowire="byName"></bean> -->
+
+	<!-- Autowire using type -->
+	<!-- <bean id="humanHeart" class="studyonline.autowiring.xmlapproach.Heart"> 
+		</bean> <bean id="human" class="studyonline.autowiring.xmlapproach" autowire="byType"></bean> -->
+
+	<!-- Autowire using constructor -->
+	<bean id="humanHeart"
+		class="studyonline.autowiring.xmlapproach.Heart">
+	</bean>
+	<bean id="human" class="studyonline.autowiring.xmlapproach.Human"
+		autowire="constructor"></bean>
+
+</beans>
